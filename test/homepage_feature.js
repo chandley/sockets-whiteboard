@@ -1,4 +1,5 @@
 describe('homepage', function(){
+  
   beforeEach(function(){
     casper.start('http://localhost:3000/sockets');
   });
@@ -11,10 +12,10 @@ describe('homepage', function(){
 
   it('can post message', function(){
     casper.then(function(){
-      casper.fill('form[name="chatForm"]', {
-        m: 'yeah',
+      casper.fill('#messagesend', {
+        messagetext: 'yeah',
       });
-      casper.click('button[id="submit"]');
+      casper.click('#sendbutton');
       casper.then(function() {
         expect('#messages').to.contain.text('yeah');
       });

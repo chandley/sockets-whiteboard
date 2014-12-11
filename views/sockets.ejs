@@ -17,8 +17,8 @@
   <h1>President Business Chat Page</h1>
   <body>
     <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
+    <form id="messagesend" action="">
+      <input name="messagetext" id="m" autocomplete="off" /><button id="sendbutton">Send</button>
     </form>
   </body>
     <script src='/socket.io/socket.io.js'></script>

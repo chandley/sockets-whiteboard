@@ -4,7 +4,6 @@ var server  = require('http').createServer(app);
 var io      = require('socket.io')(server);
 var socket  = require('./src/socketController')(io);
 
-//view engine setup
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 
