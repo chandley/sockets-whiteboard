@@ -1,0 +1,23 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Benc93/websockets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benc93/websockets/issues"
+  },
+  "homepage": "https://github.com/Benc93/websockets",
+  "dependencies": {
+    "ejs": "^1.0.0",
+    "express": "^4.10.5"
+  }
+}
