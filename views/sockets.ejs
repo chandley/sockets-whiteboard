@@ -13,8 +13,15 @@
       #messages li { padding: 5px 10px; }
       #messages li:nth-child(odd) { background: #eee; }
     </style>
-      <script src='/socket.io/socket.io.js'></script>
-      <script src='/js/sockets.js'></script>
+    <script src='/socket.io/socket.io.js'></script>
+    <script src='/js/sockets.js'></script>
+    <script>
+      var socket = io.connect('http://localhost');
+      socket.on('names', function(data) {
+        console.log(data.age)
+        socket.emit('stuff', { climb: 'cenotaph corner', grade: 'E1' })
+      });
+    </script>
   </head>
   <body>
     <ul id="messages"></ul>
