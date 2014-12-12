@@ -1,7 +1,7 @@
 describe('homepage', function(){
   
   beforeEach(function(){
-    casper.start('http://localhost:3000/sockets');
+    casper.start('http://localhost:3000/');
   });
 
   it('has a title', function(){
@@ -10,16 +10,28 @@ describe('homepage', function(){
     });
   });
 
-  it('can post message', function(){
-    casper.then(function(){
-      casper.fill('#messagesend', {
-        messagetext: 'yeah',
+  it('adds the user to the chat room', function() {
+    casper.then(function() {
+      casper.fill('#username', {
+        usertext: 'Lord Vader',
       });
-      casper.click('#sendbutton');
+      casper.click('#startchat');
       casper.then(function() {
-        expect('#messages').to.contain.text('yeah');
+        expect('#messages').to.contain.text('Lord Vader has entered the room');
       });
     });
   });
+
+  // it('can post message', function(){
+  //   casper.then(function(){
+  //     casper.fill('#messagesend', {
+  //       messagetext: 'yeah',
+  //     });
+  //     casper.click('#sendbutton');
+  //     casper.then(function() {
+  //       expect('#messages').to.contain.text('yeah');
+  //     });
+  //   });
+  // });
 
 });
