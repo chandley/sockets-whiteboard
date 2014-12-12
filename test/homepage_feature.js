@@ -1,7 +1,7 @@
 describe('homepage', function(){
   
   beforeEach(function(){
-    casper.start('http://localhost:3000/sockets');
+    casper.start('http://localhost:3000/');
   });
 
   it('has a title', function(){
