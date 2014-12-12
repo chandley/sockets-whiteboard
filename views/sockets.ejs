@@ -2,16 +2,7 @@
 <html>
   <head>
     <title>Socket.IO chat</title>
-    <style>
-      * { margin: 0; padding: 0; box-sizing: border-box; }
-      body { font: 13px Helvetica, Arial; }
-      form { background: #000; padding: 3px; position: relative; bottom: 0; width: 100%; }
-      form input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      form button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
-      #messages { list-style-type: none; margin: 0; padding: 0; }
-      #messages li { padding: 5px 10px; }
-      #messages li:nth-child(odd) { background: #eee; }
-    </style>
+    <link rel="stylesheet" href="/css/stylesheet.css">
     <script src='/socket.io/socket.io.js'></script>
     <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
@@ -20,11 +11,11 @@
   <h1>President Business Chat Page</h1>
   <body>
     <ul id="messages"></ul>
-    <form id="username" action="">
+    <form id="username" action="#">
       <input name="usertext" id="user" autocomplete="off" />
       <button id="startchat">Start Chatting</button>
     </form>
-    <form id="messagesend" action="">
+    <form id="messagesend" action="#">
       <input name="messagetext" id="message" autocomplete="off" />
       <button id="sendbutton">Send</button>
     </form>
