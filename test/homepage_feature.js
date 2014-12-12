@@ -1,7 +1,7 @@
 describe('homepage', function(){
   
   beforeEach(function(){
-    casper.start('http://localhost:3000/');
+    casper.start('http://localhost:3000/sockets');
   });
 
   it('has a title', function(){
@@ -22,16 +22,16 @@ describe('homepage', function(){
     });
   });
 
-  // it('can post message', function(){
-  //   casper.then(function(){
-  //     casper.fill('#messagesend', {
-  //       messagetext: 'yeah',
-  //     });
-  //     casper.click('#sendbutton');
-  //     casper.then(function() {
-  //       expect('#messages').to.contain.text('yeah');
-  //     });
-  //   });
-  // });
+  it('can post message', function(){
+    casper.then(function(){
+      casper.fill('#messagesend', {
+        messagetext: 'yeah',
+      });
+      casper.click('#sendbutton');
+      casper.then(function() {
+        expect('#messages').to.contain.text('yeah');
+      });
+    });
+  });
 
 });
