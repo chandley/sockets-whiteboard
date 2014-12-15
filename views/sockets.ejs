@@ -7,9 +7,15 @@
     <script src='https://code.jquery.com/jquery-2.1.1.min.js'></script>
     <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/canvas.js"></script>
   </head>
-  <h1>President Business Chat Page</h1>
+  
   <body>
+    <h1>President Business Chat Page</h1>
+    <canvas id="whiteboard" width="600" height="400" style="border: 1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+    </canvas>
+
     <ul id="messages"></ul>
     <form id="username" action="#">
       <input name="usertext" id="user" autocomplete="off" />
