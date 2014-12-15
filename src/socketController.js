@@ -13,7 +13,9 @@ var socket = function(io){
     });
     socket.on('sendLine', function(x, y) {
       io.emit('shareLine', x, y);
-      console.log('coordinates shared')
+    });
+    socket.on('sendMove', function(x, y) {
+      io.emit('shareMove', x, y);     
     });
 	});
 };
