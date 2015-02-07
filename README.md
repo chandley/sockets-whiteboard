@@ -30,7 +30,7 @@ then open localhost:3000
 ### Tests
 
 ### Images
-
+![Image of screen](https://github.com/chandley/sockets-whiteboard/blob/master/public/screenshot.png)
 ### To do
 
 
