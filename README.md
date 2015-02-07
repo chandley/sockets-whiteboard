@@ -5,6 +5,8 @@
 
 ## Summary
 
+Extend chatroom so a shared whiteboard is visible to participants
+
 ### Problem
 
 ### Languages/Platforms/Tools
@@ -18,7 +20,7 @@
 
 ### Solution
 
-
+Drawing actions on the canvas are communicated to other users via websockets
 
 ### Setup
 
